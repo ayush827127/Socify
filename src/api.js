@@ -9,21 +9,21 @@ export const getAllUsers = async () => {
 };
 
 export const getUserFollowers = async (email) => {
-  const response = await axios.get(`/api/user/followers/${email}`);
+  const response = await axios.get(`${API_URL}/api/user/followers/${email}`);
   return response.data;
 };
 
 export const getUserFollowing = async (email) => {
-  const response = await axios.get(`/api/user/following/${email}`);
+  const response = await axios.get(`${API_URL}/api/user/following/${email}`);
   return response.data;
 };
 
 export const followUser = async (followerEmail, followedEmail) => {
-  const response = await axios.post(`/api/user/follow/${followedEmail}`, { followerEmail });
+  const response = await axios.post(`${API_URL}/api/user/follow/${followedEmail}`, { followerEmail });
   return response.data;
 };
 
 export const unfollowUser = async (followerEmail, followedEmail) => {
-  const response = await axios.post(`/api/user/unfollow/${followedEmail}`, { followerEmail });
+  const response = await axios.post(`${API_URL}/api/user/unfollow/${followedEmail}`, { followerEmail });
   return response.data;
 };
