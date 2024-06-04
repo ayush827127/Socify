@@ -1,6 +1,8 @@
 // src/api.js
 import axios from 'axios';
 
+const API_URL = "https://socifybackend-yt66.onrender.com"
+
 export const getAllUsers = async () => {
   const response = await axios.get(`/api/user/all`);
   return response.data;

@@ -7,7 +7,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'https://socifybackend-yt66.onrender.com/', // Adjust this to match your backend server URL
+        target: 'https://socifybackend-yt66.onrender.com', // Adjust this to match your backend server URL
         changeOrigin: true,
         secure: false,
       },
